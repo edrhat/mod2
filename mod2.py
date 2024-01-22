@@ -420,10 +420,11 @@ class Tela:
         self.d1.config(bg="white", foreground="red")
         self.d1.place(x="100", y="250")
 
-        self.bt1 = Button(j1, text="INICIAR")
-        self.bt1.config(bg="green", foreground="white")
-        self.bt1["font"] = ("Arial", "30")
-        self.bt1.place(x=390, y=500)
+        self.bt2 = Button(j1, text="INICIAR")
+        self.bt2.config(bg="green", foreground="white")
+        self.bt2["font"] = ("Arial", "30")
+        self.bt2.place(x=390, y=500)
+        self.bt2.bind("<Button-1>", self.mem)
 
     def ressC(self, event):
 
@@ -454,10 +455,22 @@ class Tela:
         self.bt1.config(bg="green", foreground="white")
         self.bt1["font"] = ("Arial", "30")
         self.bt1.place(x=390, y=500)
-        
-    
-    
+        self.bt1.bind("<Button-1>", self.mem)
 
+    def mem(self, event):
+        print("foi")
+
+
+        self.d1.place(x=10000)
+        self.bt1.place(x=10000)
+        self.bt2.place(x=10000)
+
+        self.p1 = Label(j1, text="ine a velocidade do CPU?")
+        self.p1["font"] = ("Arial", "26", "bold")
+        self.p1.config(bg="black", foreground="lime",)
+        self.p1.place(x="50", y="180")
+        
+  
 j1 = Tk()
 Tela(j1)
 j1.title("Simulador - Módulo 2                 |                    BY EDUARDO")
