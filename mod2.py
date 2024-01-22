@@ -425,6 +425,7 @@ class Tela:
         self.bt2["font"] = ("Arial", "30")
         self.bt2.place(x=390, y=500)
         self.bt2.bind("<Button-1>", self.mem)
+        self.bt2.bind("<Button-1>", self.bts)
 
     def ressC(self, event):
 
@@ -457,18 +458,33 @@ class Tela:
         self.bt1.place(x=390, y=500)
         self.bt1.bind("<Button-1>", self.mem)
 
+    def bts(self, event):
+
+        self.bt2.place(x=10000)
+
+        self.d1.place(x=10000)
+        self.bt1.place(x=10000)
+       
+        #self.bt2.place(x=10000)
+
+        self.p1 = Label(j1, text="Quais das alternativas descreve a memória RAM \ncorretamente?")
+        self.p1["font"] = ("Arial", "26", "bold")
+        self.p1.config(bg="black", foreground="lime",)
+        self.p1.place(x=80, y=180)
+
     def mem(self, event):
         print("foi")
 
 
         self.d1.place(x=10000)
         self.bt1.place(x=10000)
-        self.bt2.place(x=10000)
+       
+        #self.bt2.place(x=10000)
 
-        self.p1 = Label(j1, text="ine a velocidade do CPU?")
+        self.p1 = Label(j1, text="Quais das alternativas descreve a memória RAM \ncorretamente?")
         self.p1["font"] = ("Arial", "26", "bold")
         self.p1.config(bg="black", foreground="lime",)
-        self.p1.place(x="50", y="180")
+        self.p1.place(x=80, y=180)
         
   
 j1 = Tk()
