@@ -467,11 +467,46 @@ class Tela:
        
         #self.bt2.place(x=10000)
 
+        
         self.p1 = Label(j1, text="Quais das alternativas descreve a memória RAM \ncorretamente?")
         self.p1["font"] = ("Arial", "26", "bold")
         self.p1.config(bg="black", foreground="lime",)
         self.p1.place(x=80, y=180)
 
+        #M1
+        m1 = PhotoImage(file="m1.png")
+        self.mm1 = Button(j1, image=m1)
+        self.mm1.m1 = m1
+        self.mm1.place(x=230,y=300)
+        self.mm1.bind("<Button-1>", self.memE)
+        
+     
+
+        #M2
+        m2 = PhotoImage(file="m2.png")
+        self.mm2 = Button(j1, image=m2)
+        self.mm2.m2 = m2
+        self.mm2.place(x=230,y=380)
+        self.mm2.bind("<Button-1>", self.memE)
+        
+
+
+        #M3
+        m3 = PhotoImage(file="m3.png")
+        self.mm3 = Button(j1, image=m3)
+        self.mm3.m3 = m3
+        self.mm3.place(x=230,y=460)
+        self.mm3.bind("<Button-1>", self.memE)
+        
+
+
+        #M4
+        m4 = PhotoImage(file="m4.png")
+        self.mm4 = Button(j1, image=m4)
+        self.mm4.m4 = m4
+        self.mm4.place(x=230,y=540)
+        self.mm4.bind("<Button-1>", self.memC)
+        
     def mem(self, event):
         print("foi")
 
@@ -485,12 +520,275 @@ class Tela:
         self.p1["font"] = ("Arial", "26", "bold")
         self.p1.config(bg="black", foreground="lime",)
         self.p1.place(x=80, y=180)
+
+        #M1
+        m1 = PhotoImage(file="m1.png")
+        self.mm1 = Button(j1, image=m1)
+        self.mm1.m1 = m1
+        self.mm1.place(x=230,y=300)
+        self.mm1.bind("<Button-1>", self.memE)
+        
+     
+
+        #M2
+        m2 = PhotoImage(file="m2.png")
+        self.mm2 = Button(j1, image=m2)
+        self.mm2.m2 = m2
+        self.mm2.place(x=230,y=380)
+        self.mm2.bind("<Button-1>", self.memE)
+        
+
+
+        #M3
+        m3 = PhotoImage(file="m3.png")
+        self.mm3 = Button(j1, image=m3)
+        self.mm3.m3 = m3
+        self.mm3.place(x=230,y=460)
+        self.mm3.bind("<Button-1>", self.memE)
+        
+
+
+        #M4
+        m4 = PhotoImage(file="m4.png")
+        self.mm4 = Button(j1, image=m4)
+        self.mm4.m4 = m4
+        self.mm4.place(x=230,y=540)
+        self.mm4.bind("<Button-1>", self.memC)
+
+    def memC(self, event):
+
+        global p
+        global pp
+        global pontos
+        p = p + 50
+        pp.place(x=100000)
+        
+        pp = Label(j1,text=p)
+        pp["font"] = ("Arial", "18", "bold")
+        pp.config(bg="white", foreground="red")
+        pp.place(x=920, y=131)
+        
+        self.p1.place(x=10000)
+        self.p1 = Label(j1, text="A memória RAM funciona como uma auxiliar de qual\n componente?")
+        self.p1["font"] = ("Arial", "26", "bold")
+        self.p1.config(bg="black", foreground="lime",)
+        self.p1.place(x=80, y=180)
+
+        self.mm1.place(x=10000)
+        self.mm2.place(x=10000)
+        self.mm3.place(x=10000)
+        self.mm4.place(x=10000)
+
+        #RAM1
+        ram1 = PhotoImage(file="ram1.png")
+        self.ramm1 = Button(j1, image=ram1)
+        self.ramm1.ram1 = ram1
+        self.ramm1.place(x=230,y=300)
+        self.ramm1.bind("<Button-1>", self.memrE)
+       
+        
+     
+
+        #RAM2
+        ram2 = PhotoImage(file="ram2.png")
+        self.ramm2 = Button(j1, image=ram2)
+        self.ramm2.ram2 = ram2
+        self.ramm2.place(x=230,y=380)
+        self.ramm2.bind("<Button-1>", self.memrC)
+
+
+         #RAM3
+        ram3 = PhotoImage(file="ram3.png")
+        self.ramm3 = Button(j1, image=ram3)
+        self.ramm3.ram3 = ram3
+        self.ramm3.place(x=230,y=460)
+        self.ramm3.bind("<Button-1>", self.memrE)
+        
+         #RAM4
+        ram4 = PhotoImage(file="ram4.png")
+        self.ramm4 = Button(j1, image=ram4)
+        self.ramm4.ram4 = ram4
+        self.ramm4.place(x=230,y=540)
+        self.ramm4.bind("<Button-1>", self.memrE)
+
+    def memE(self, event):
+
+        global p
+        global pp
+        global pontos
+        p = p - 50
+        pp.place(x=100000)
+        
+        pp = Label(j1,text=p)
+        pp["font"] = ("Arial", "18", "bold")
+        pp.config(bg="white", foreground="red")
+        pp.place(x=920, y=131)
+        
+        self.p1.place(x=10000)
+        self.p1 = Label(j1, text="A memória RAM funciona como uma auxiliar de qual\n componente?")
+        self.p1["font"] = ("Arial", "26", "bold")
+        self.p1.config(bg="black", foreground="lime",)
+        self.p1.place(x=80, y=180)
+
+        self.mm1.place(x=10000)
+        self.mm2.place(x=10000)
+        self.mm3.place(x=10000)
+        self.mm4.place(x=10000)
+
+        #RAM1
+        ram1 = PhotoImage(file="ram1.png")
+        self.ramm1 = Button(j1, image=ram1)
+        self.ramm1.ram1 = ram1
+        self.ramm1.place(x=230,y=300)
+        self.ramm1.bind("<Button-1>", self.memrE)
+       
+        
+     
+
+        #RAM2
+        ram2 = PhotoImage(file="ram2.png")
+        self.ramm2 = Button(j1, image=ram2)
+        self.ramm2.ram2 = ram2
+        self.ramm2.place(x=230,y=380)
+        self.ramm2.bind("<Button-1>", self.memrC)
+
+
+         #RAM3
+        ram3 = PhotoImage(file="ram3.png")
+        self.ramm3 = Button(j1, image=ram3)
+        self.ramm3.ram3 = ram3
+        self.ramm3.place(x=230,y=460)
+        self.ramm3.bind("<Button-1>", self.memrE)
+        
+         #RAM4
+        ram4 = PhotoImage(file="ram4.png")
+        self.ramm4 = Button(j1, image=ram4)
+        self.ramm4.ram4 = ram4
+        self.ramm4.place(x=230,y=540)
+        self.ramm4.bind("<Button-1>", self.memrE)
+
+    def memrC(self, event):
+
+        global p
+        global pp
+        global pontos
+        p = p + 50
+        pp.place(x=100000)
+        
+        pp = Label(j1,text=p)
+        pp["font"] = ("Arial", "18", "bold")
+        pp.config(bg="white", foreground="red")
+        
+        pp.place(x=920, y=131)
+
+        self.p1.place(x=10000)
+        self.p1 = Label(j1, text="Em qual Slot conectamos a memória RAM?")
+        self.p1["font"] = ("Arial", "26", "bold")
+        self.p1.config(bg="black", foreground="lime",)
+        self.p1.place(x=150, y=180)
+
+        self.ramm1.place(x=10000)
+        self.ramm2.place(x=10000)
+        self.ramm3.place(x=10000)
+        self.ramm4.place(x=10000)
+
+        #DDR
+        ddr = PhotoImage(file="ddr.png")
+        self.ddrr = Button(j1, image=ddr)
+        self.ddrr.ddr = ddr
+        self.ddrr.place(x=260,y=300)
+        self.ddrr.bind("<Button-1>", self.rpciC)
+
+        #PCI
+        pci = PhotoImage(file="pci.png")
+        self.pcii = Button(j1, image=pci)
+        self.pcii.pci = pci
+        self.pcii.place(x=260,y=470)
+        self.pcii.bind("<Button-1>", self.rpciE)
+
+    def memrE(self, event):
+
+        global p
+        global pp
+        global pontos
+        p = p - 50
+        pp.place(x=100000)
+        
+        pp = Label(j1,text=p)
+        pp["font"] = ("Arial", "18", "bold")
+        pp.config(bg="white", foreground="red")
+        
+        pp.place(x=920, y=131)
+
+
+        self.p1.place(x=10000)
+        self.p1 = Label(j1, text="Em qual Slot conectamos a memória RAM?")
+        self.p1["font"] = ("Arial", "26", "bold")
+        self.p1.config(bg="black", foreground="lime",)
+        self.p1.place(x=150, y=180)
+
+        self.ramm1.place(x=10000)
+        self.ramm2.place(x=10000)
+        self.ramm3.place(x=10000)
+        self.ramm4.place(x=10000)
+
+        #DDR
+        ddr = PhotoImage(file="ddr.png")
+        self.ddrr = Button(j1, image=ddr)
+        self.ddrr.ddr = ddr
+        self.ddrr.place(x=260,y=300)
+        self.ddrr.bind("<Button-1>", self.rpciC)
+
+        #PCI
+        pci = PhotoImage(file="pci.png")
+        self.pcii = Button(j1, image=pci)
+        self.pcii.pci = pci
+        self.pcii.place(x=260,y=470)
+        self.pcii.bind("<Button-1>", self.rpciE)
+
+    def rpciE(self, event):
+
+        global p
+        global pp
+        global pontos
+        p = p - 50
+        pp.place(x=100000)
+        
+        pp = Label(j1,text=p)
+        pp["font"] = ("Arial", "18", "bold")
+        pp.config(bg="white", foreground="red")
+        
+        pp.place(x=920, y=131)
+
+        self.pcii.place(x=210000)
+        self.ddrr.place(x=20000)
+
+        
+
+    def rpciC(self, event):
+
+        global p
+        global pp
+        global pontos
+        p = p + 50
+        pp.place(x=100000)
+        
+        pp = Label(j1,text=p)
+        pp["font"] = ("Arial", "18", "bold")
+        pp.config(bg="white", foreground="red")
+        
+        pp.place(x=920, y=131)
+
+        self.pcii.place(x=210000)
+        self.ddrr.place(x=20000)
+
+        
         
   
 j1 = Tk()
 Tela(j1)
 j1.title("Simulador - Módulo 2                 |                    BY EDUARDO")
-j1.geometry("1000x700+100+30")
+j1.geometry("1000x700+200+30")
 j1.config(bg="white")
 j1.resizable(width=False, height=False)
 j1.mainloop()
